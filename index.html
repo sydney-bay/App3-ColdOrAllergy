@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Sydney Jordan
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -27,33 +27,40 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 -->
 	
    <head> 
-      <title>Hello World</title>  
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Hello World</title><!--/page title -->  
+      <meta name="viewport" content="width=device-width, initial-scale=1"><!--/page details -->
       <meta name="apple-mobile-web-app-capable" content="yes">
-      <link rel="stylesheet" href="w3.css">
+      <link rel="stylesheet" href="w3.css"><!--/links out to other files -->
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
 
 
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
+        var allergy_count = 0; //start allergy variable store initialized at 0 
+        var cold_count = 0; //start cold variable store initialized at 0 
 
 
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
-		alert(allergy_count);
+        function allergyAdd(){ //start of code for function to be executed 
+            allergy_count = allergy_count + 1; //function to run that increases variable by 1 
+		alert(allergy_count);  
 
-        }
+        } //end of code for function to be executed
 
-        function coldAdd(){
-            cold_count = cold_count + 1;
-        }
+        function coldAdd(){ //start of code for function to be executed 
+            cold_count = cold_count + 1; //function to run that increases variable by 1 
+        } //end of code for function to be executed 
 
   </script>
 
+  <script>
+	  // change content
+	  var resultText = document.getElementById("results");
+	  
+  </script>
 
 
+<!--/next lines set up app to display pages within html body -->
+<!--/large portion of csss styling belongs in header section between <style> </style> -->
 <style>	
 .body {
      margin: 0em;
@@ -72,13 +79,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
   .page:target {
     left: 0vw;
-    z-index: 1;
+    z-index: 1; 
 }
 </style>
+<!--/z-index brings to top of targeted page 
+after initially displaying ant htmml body not part of a page first-->
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1>
+	<h1>Cold or Allergies?</h1><!--/html body not part of a page that will be displayed first -->
 </div>
 	
 <div id="content" class="w3-container">
@@ -90,28 +99,92 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-<div class="page" id="one">
+<div class="page" id="one"><!--/divide content to be displayed as a page -->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
 	</div>
 	
-    	<div id="content" class="w3-container">
-        <p>Put Question 1 content here.</p>    
-    	</div>
+    	<div id="content" class="w3-container"><!--/button code to trigger JavaScript event -->
+        	<p>Are your eyes watery or itchy?</p>
+		<a href="#two" on click="allergyAdd();" class="w3-btn w3-teal"> Yes</a>
+		<a href="#two" on click="coldAdd();" class="w3-btn w3-teal"> No</a>
+    	</div><!--/content -->
 </div>
 
-<div class="page" id="two">
+<div class="page" id="two"><!--/divide content to be displayed as a page -->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
 	</div>
 	
-	<div id="content" class="w3-container">
-		<p>Content of page 2 goes here.</p>
-	</div>
+	<div id="content" class="w3-container"><!--/button code to trigger JavaScript event -->
+		<p>Do you have a fever?</p>
+		<a href="#three" on click="coldAdd();" class="w3-btn w3-teal"> Yes</a>
+		<a href="#three" on click="allergyAdd();" class="w3-btn w3-teal"> No</a>
+	</div><!--/content -->
 </div>	
 
-<footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
+<div class="page" id="three"><!--/divide content to be displayed as a page -->
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1>
+	</div>
+	
+	<div id="content" class="w3-container"><!--/button code to trigger JavaScript event -->
+		<p>Do you have a sore throat?</p>
+		<a href="#four" on click="coldAdd();" class="w3-btn w3-teal"> Yes</a>
+		<a href="#four" on click="allergyAdd();" class="w3-btn w3-teal"> No</a>
+	</div><!--/content -->
+</div>
+	
+<div class="page" id="four"><!--/divide content to be displayed as a page -->
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1>
+	</div>
+	
+    	<div id="content" class="w3-container"><!--/button code to trigger JavaScript event -->
+        	<p>Are your symptoms seasonal or chronic?</p>
+		<a href="#five" on click="allergyAdd();" class="w3-btn w3-teal"> Yes</a>
+		<a href="#five" on click="coldAdd();" class="w3-btn w3-teal"> No</a>
+    	</div><!--/content -->
+</div>
+	
+<div class="page" id="five"><!--/divide content to be displayed as a page -->
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 5</h1>
+	</div>
+	
+	<div id="content" class="w3-container"><!--/button code to trigger JavaScript event -->
+		<p>Do you have general aches and pains?</p>
+		<a href="#six" on click="coldAdd();" class="w3-btn w3-teal"> Yes</a>
+		<a href="#six" on click="allergyAdd();" class="w3-btn w3-teal"> No</a>
+	</div><!--/content -->
+</div>
+	
+<div class="page" id="six"><!--/divide content to be displayed as a page -->
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 6</h1>
+	</div>
+	
+    	<div id="content" class="w3-container"><!--/button code to trigger JavaScript event -->
+        	<p>Is your mucus thin and watery?</p>
+		<a href="#seven" on click="allergyAdd();" class="w3-btn w3-teal"> Yes</a>
+		<a href="#seven" on click="coldAdd();" class="w3-btn w3-teal"> No</a>
+    	</div><!--/content -->
+</div>
+	
+<div class="page" id="seven"><!--/divide content to be displayed as a page -->
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Results</h1>
+	</div>
+	
+    	<div id="content" class="w3-container"><!--/button code to trigger JavaScript event -->
+        	<p id="results"> resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; </p>
+		<a href="#eight" class="w3-btn w3-teal"> Results</a>
+		
+    	</div><!--/changing html content using innerhtml property -->
+</div>
+
+<footer class="w3-bottom w3-container w3-flat-black">
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 </footer>
 
 </body>
