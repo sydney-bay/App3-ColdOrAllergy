@@ -47,10 +47,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         } //end of code for function to be executed
 
         function coldAdd(){ //start of code for function to be executed 
-            cold_count = cold_count + 1; //function to run that increases variable by 1 
+            cold_count = cold_count + 1; //function to run that increases variable by 1
+		alert(cold_count);
         } //end of code for function to be executed 
-	
-	var resultText = document.getElementById("results")
 
 </script>
 	  // change content
@@ -186,12 +185,16 @@ after initially displaying ant htmml body not part of a page first-->
 	</div>
 	
     	<div id="content" class="w3-container"><!--/button code to trigger JavaScript event -->
-		<a href="#eight" class="w3-btn w3-teal"> Results</a>
 		<p id="results">resultText.innerHTML = "Probability it is allergies =" + allergy percent + "<br> Probability it is a cold =" + coldPercent;<p/>
 		
-    	</div><!--/changing html content using innerhtml property -->	
+    	</div><!--/changing html content using innerhtml property -->
+
+
+<script>
+	var resultText = document.getElementById("results")
+</script>
 	
-<footer class="w3-bottom w3-container w3-flat-black">
+<footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 </footer>
 
