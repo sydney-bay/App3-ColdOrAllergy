@@ -52,10 +52,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
   </script>
 
+<p id="results"> resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; </p>
   <script>
 	  // change content
 	  var resultText = document.getElementById("results");
-	  <p id="results"> resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; </p>
 	  
   </script>
 
@@ -174,15 +174,25 @@ after initially displaying ant htmml body not part of a page first-->
 	
 <div class="page" id="seven"><!--/divide content to be displayed as a page -->
 	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Calculate Your Results</h1>
+	</div>
+	
+    	<div id="content" class="w3-container"><!--/button code to trigger JavaScript event -->
+		<a href="#results" class="w3-btn w3-teal"> Results</a>
+		
+    	</div><!--/changing html content using innerhtml property -->
+</div>
+
+<div class="page" id="results"><!--/divide content to be displayed as a page -->
+	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
 	
     	<div id="content" class="w3-container"><!--/button code to trigger JavaScript event -->
 		<a href="#eight" class="w3-btn w3-teal"> Results</a>
 		
-    	</div><!--/changing html content using innerhtml property -->
-</div>
-
+    	</div><!--/changing html content using innerhtml property -->	
+	
 <footer class="w3-bottom w3-container w3-flat-black">
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 </footer>
