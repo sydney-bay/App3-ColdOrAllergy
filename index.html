@@ -53,8 +53,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	function getresults(){
 		allergyPercent = (allergy_count/(allergy_count+cold_count))*100;
 		coldPercent = (cold_count/(allergy_count+cold_count))*100;
-		var resultText = document.getElementById("results");
-		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
+		var resultText = document.getElementById("results-section");
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent "%" + "<br> Probability it is a cold =" + coldPercent "%";
 	}
 		
 </script>
@@ -172,12 +172,12 @@ after initially displaying ant htmml body not part of a page first-->
 </div>
 
 <div class="page" id="results"><!--/divide content to be displayed as a page -->
-	<div class="w3-container w3-flat-purple">
+	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
 	
 	<a href="results" onclick="getresults();" class="w3-btn w3-black">Get your results here</a>
-	<p id="#results-section"></p>
+	<p id="results-section"></p>
 		
 </div><!--/changing html content using innerhtml property -->
 
