@@ -49,11 +49,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1; //function to run that increases variable by 1
         } //end of code for function to be executed 
 
-	function getresults(){
-		allergyPercent = (allergy_count/(allergy_count+cold_count))*100;
-		coldPercent = (cold_count/(allergy_count+cold_count))*100;
-		var resultText = document.getElementById("results-section");
-		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%";
+	function getresults(){ //start of function for results page
+		allergyPercent = (allergy_count/(allergy_count+cold_count))*100; //calculate allergy percent
+		coldPercent = (cold_count/(allergy_count+cold_count))*100; //calculate cold percent
+		var resultText = document.getElementById("results-section"); //captures content of results page paragraph
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%"; 
+		/* changes what's within paragraph to text in quotes
+		+ sign to print what is in the variable based on the getresults function with the text in quotations */
 	}
 		
 </script>
@@ -92,97 +94,97 @@ after initially displaying ant htmml body not part of a page first-->
 <div id="content" class="w3-container">
 	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
 	
-	<a href="#one" class="w3-btn w3-purple w3-round"> Get Started </a>
+	<a href="#one" class="w3-btn w3-pink w3-round-xxlarge"> Get Started </a>
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
 <div class="page" id="one"><!--/divide content to be displayed as a page -->
-	<div id="header" class="w3-container w3-flat-carrot">
+	<div id="header" class="w3-container w3-flat-amethyst">
 		<h1>Question 1</h1>
 	</div>
 	
     	<div id="content" class="w3-container"><!--/button code to trigger JavaScript event -->
         	<p>Are your eyes watery or itchy?</p>
-		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-blue-gray"> Yes</a>
-		<a href="#two" onclick="coldAdd();" class="w3-btn w3-teal"> No</a>
+		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-hover-blue-gray"> Yes</a>
+		<a href="#two" onclick="coldAdd();" class="w3-btn w3-hover-teal"> No</a>
     	</div><!--/content -->
 </div>
 
 <div class="page" id="two"><!--/divide content to be displayed as a page -->
-	<div class="w3-container w3-flat-carrot">
+	<div class="w3-container w3-flat-amethyst">
 		<h1>Question 2</h1>
 	</div>
 	
 	<div id="content" class="w3-container"><!--/button code to trigger JavaScript event -->
 		<p>Do you have a fever?</p>
-		<a href="#three" onclick="coldAdd();" class="w3-btn w3-blue-gray"> Yes</a>
-		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-teal"> No</a>
+		<a href="#three" onclick="coldAdd();" class="w3-btn w3-hover-blue-gray"> Yes</a>
+		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-hover-teal"> No</a>
 	</div><!--/content -->
 </div>	
 
 <div class="page" id="three"><!--/divide content to be displayed as a page -->
-	<div class="w3-container w3-flat-carrot">
+	<div class="w3-container w3-flat-amethyst">
 		<h1>Question 3</h1>
 	</div>
 	
 	<div id="content" class="w3-container"><!--/button code to trigger JavaScript event -->
 		<p>Do you have a sore throat?</p>
-		<a href="#four" onclick="coldAdd();" class="w3-btn w3-blue-gray"> Yes</a>
-		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-teal"> No</a>
+		<a href="#four" onclick="coldAdd();" class="w3-btn w3-hover-blue-gray"> Yes</a>
+		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-hover-teal"> No</a>
 	</div><!--/content -->
 </div>
 	
 <div class="page" id="four"><!--/divide content to be displayed as a page -->
-	<div id="header" class="w3-container w3-flat-carrot">
+	<div id="header" class="w3-container w3-flat-amethyst">
 		<h1>Question 4</h1>
 	</div>
 	
     	<div id="content" class="w3-container"><!--/button code to trigger JavaScript event -->
         	<p>Are your symptoms seasonal or chronic?</p>
-		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-blue-gray"> Yes</a>
-		<a href="#five" onclick="coldAdd();" class="w3-btn w3-teal"> No</a>
+		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-hover-blue-gray"> Yes</a>
+		<a href="#five" onclick="coldAdd();" class="w3-btn w3-hover-teal"> No</a>
     	</div><!--/content -->
 </div>
 	
 <div class="page" id="five"><!--/divide content to be displayed as a page -->
-	<div class="w3-container w3-flat-carrot">
+	<div class="w3-container w3-flat-amethyst">
 		<h1>Question 5</h1>
 	</div>
 	
 	<div id="content" class="w3-container"><!--/button code to trigger JavaScript event -->
 		<p>Do you have general aches and pains?</p>
-		<a href="#six" onclick="coldAdd();" class="w3-btn w3-blue-gray"> Yes</a>
-		<a href="#six" onclick="allergyAdd();" class="w3-btn w3-teal"> No</a>
+		<a href="#six" onclick="coldAdd();" class="w3-btn w3-hover-blue-gray"> Yes</a>
+		<a href="#six" onclick="allergyAdd();" class="w3-btn w3-hover-teal"> No</a>
 	</div><!--/content -->
 </div>
 	
 <div class="page" id="six"><!--/divide content to be displayed as a page -->
-	<div id="header" class="w3-container w3-flat-carrot">
+	<div id="header" class="w3-container w3-flat-amethyst">
 		<h1>Question 6</h1>
 	</div>
 	
     	<div id="content" class="w3-container"><!--/button code to trigger JavaScript event -->
         	<p>Is your mucus thin and watery?</p>
-		<a href="#results" onclick="allergyAdd();" class="w3-btn w3-blue-gray"> Yes</a>
-		<a href="#results" onclick="coldAdd();" class="w3-btn w3-teal"> No</a>
+		<a href="#results" onclick="allergyAdd();" class="w3-btn w3-hover-blue-gray"> Yes</a>
+		<a href="#results" onclick="coldAdd();" class="w3-btn w3-hover-teal"> No</a>
     	</div><!--/content -->
 </div>
 
 <div class="page" id="results"><!--/divide content to be displayed as a page -->
-	<div class="w3-container w3-flat-carrot">
+	<div class="w3-container w3-flat-midnight-blue">
 		<h1>Results</h1>
 	</div>
 	
 	<p>Click to calculate your results!</p>
-	<a href="#results" onclick="getresults();" class="w3-btn w3-pink w3-round">Get your results here</a>
+	<a href="#results" onclick="getresults();" class="w3-btn w3-pink w3-round-xxlarge">Get your results here</a>
 	<p id="results-section"></p>
 		
 </div><!--/changing html content using innerhtml property -->
 
 	
-<footer class="w3-bottom w3-container w3-flat-carrot">
+<footer class="w3-bottom w3-container w3-flat-wet-asphalt">
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 </footer>
 
