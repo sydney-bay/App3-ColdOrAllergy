@@ -48,13 +48,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function coldAdd(){ //start of code for function to be executed 
             cold_count = cold_count + 1; //function to run that increases variable by 1
+		alert(cold_count);
         } //end of code for function to be executed 
 
 	function getresults(){
 		allergyPercent = (allergy_count/(allergy_count+cold_count))*100;
 		coldPercent = (cold_count/(allergy_count+cold_count))*100;
 		var resultText = document.getElementById("results-section");
-		resultText.innerHTML = "Probability it is allergies =" + allergyPercent "%" + "<br> Probability it is a cold =" + coldPercent "%";
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%";
 	}
 		
 </script>
