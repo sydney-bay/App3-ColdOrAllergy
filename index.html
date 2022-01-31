@@ -50,15 +50,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1; //function to run that increases variable by 1
 		alert(cold_count);
         } //end of code for function to be executed 
-	
-	function percentage(allergyPercent, coldPercent){
-	   return(allergy_count/6)*100
-	   return(cold_count/6)*100
+
+	function getresults(){
+		
+		var resultText = document.getElementById("results");
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
 	}
 		
-	var resultText = document.getElementById("results")
-	<p id="results">resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;<p/>
-
 </script>
 	  // change content
 	 
@@ -171,30 +169,20 @@ after initially displaying ant htmml body not part of a page first-->
 	
     	<div id="content" class="w3-container"><!--/button code to trigger JavaScript event -->
         	<p>Is your mucus thin and watery?</p>
-		<a href="#seven" on click="allergyAdd();" class="w3-btn w3-teal"> Yes</a>
-		<a href="#seven" on click="coldAdd();" class="w3-btn w3-teal"> No</a>
+		<a href="#results" on click="allergyAdd();" class="w3-btn w3-teal"> Yes</a>
+		<a href="#results" on click="coldAdd();" class="w3-btn w3-teal"> No</a>
     	</div><!--/content -->
-</div>
-	
-<div class="page" id="seven"><!--/divide content to be displayed as a page -->
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Calculate Your Results</h1>
-	</div>
-	
-    	<div id="content" class="w3-container"><!--/button code to trigger JavaScript event -->
-		<a href="#results" class="w3-btn w3-teal"> Results</a>
-		
-    	</div><!--/changing html content using innerhtml property -->
 </div>
 
 <div class="page" id="results"><!--/divide content to be displayed as a page -->
-	<div id="header" class="w3-container w3-flat-carrot">
+	<div class="w3-container w3-flat-purple">
 		<h1>Results</h1>
 	</div>
 	
-    	<div id="content" class="w3-container"><!--/button code to trigger JavaScript event -->
+	<a href="results" onclick="getresults();" class="w3-btn w3-black">Get your results here</a>
+	<p id="#results-section"></p>
 		
-    	</div><!--/changing html content using innerhtml property -->
+</div><!--/changing html content using innerhtml property -->
 
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
